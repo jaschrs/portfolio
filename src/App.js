@@ -1,6 +1,7 @@
 import './App.css';
 import DarkVeil from './components/bg';
 import Scroll from './components/scroll';
+import Card from './components/card';
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
           
           <div style={{ width: '100%', height: '600px', position: 'relative' }}> 
             {/* content goes here */}
+            <Card />
+            
           </div>
 
         </div>
