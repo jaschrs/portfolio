@@ -7,15 +7,16 @@ function App() {
     <div className="main"> 
 
       <header style={{ 
-        height: '120px', 
-        background: '#020202', 
+        height: '70px', 
+        background: '#000000', 
         color: 'white', 
         display: 'flex', 
-        alignItems: 'center', 
+        flexDirection: 'row',
+        alignItems: 'center',
         padding: '0 2rem',
         zIndex: 10 /* Ensures Header stays on top of everything */
       }}>
-        <h3>Jasper Christian</h3>
+        
       </header>
 
       <section style={{ position: 'relative', overflow: 'hidden' }}>

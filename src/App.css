@@ -37,3 +37,8 @@
   pointer-events: none;
   z-index: 1000;
 }
+
+@font-face {
+    font-family: 'JetBrains';
+    src: url('./assets/JetBrainsMono-Regular.ttf') format('truetype');
+}
