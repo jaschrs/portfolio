@@ -7,7 +7,7 @@ function App() {
     <div className="main"> 
 
       <header style={{ 
-        height: '60px', 
+        height: '120px', 
         background: '#020202', 
         color: 'white', 
         display: 'flex', 
@@ -18,7 +18,7 @@ function App() {
         <h3>Jasper Christian</h3>
       </header>
 
-      <section style={{ position: 'relative', height: 500, overflow: 'hidden' }}>
+      <section style={{ position: 'relative', overflow: 'hidden' }}>
         
         <div style={{ 
           position: 'absolute', 
