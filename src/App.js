@@ -1,10 +1,12 @@
 import './App.css';
-import Card from './components/card';
+import DarkVeil from './components/bg';
 
 function App() {
   return (
-    <div className="gradient-bg">
-      <Card />
+    <div>
+      <div style={{ width: '100%', height: '600px', position: 'relative' }}> 
+        <DarkVeil />
+      </div>
     </div>
   );
 }
