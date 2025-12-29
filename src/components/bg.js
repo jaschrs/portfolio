@@ -74,7 +74,7 @@ void main(){
 `;
 
 function DarkVeil({
-  hueShift = 0,
+  hueShift = 30,
   noiseIntensity = 0,
   scanlineIntensity = 0,
   speed = 0.5,
