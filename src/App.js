@@ -11,7 +11,7 @@ function App() {
 
 
           <div style={{ width: '100%', height: '600px', position: 'relative' }}> 
-              // content here
+              
               <DarkVeil />
             </div>
 
