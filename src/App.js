@@ -8,14 +8,14 @@ function App() {
 
       <header style={{ 
         height: '60px', 
-        background: '#1a1a1a', 
+        background: '#020202', 
         color: 'white', 
         display: 'flex', 
         alignItems: 'center', 
         padding: '0 2rem',
         zIndex: 10 /* Ensures Header stays on top of everything */
       }}>
-        <h3>My Website</h3>
+        <h3>Jasper Christian</h3>
       </header>
 
       <section style={{ position: 'relative', height: 500, overflow: 'hidden' }}>
