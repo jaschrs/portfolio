@@ -2,7 +2,6 @@
     scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
-    height: 5000px;
     overflow: hidden;
 }
 

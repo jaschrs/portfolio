@@ -7,11 +7,11 @@ function App() {
   return (
     <div className="main"> 
 
-      <section style={{ position: 'relative', overflow: 'hidden', height: '7vh', alignItems: 'center', display: 'flex', justifyContent: 'center' }}>
-        <h1 style={{ color: 'white', fontSize: '1.5rem', fontFamily: 'JetBrains' }}>Jasper</h1>
+      <section style={{ position: 'relative', overflow: 'hidden', height: '7vh', alignItems: 'center', display: 'flex', justifyContent: 'center', borderBottom: '1px solid #cccccc4e' }}>
+        <h1 style={{ color: 'white', fontSize: '2vh', fontFamily: 'JetBrains' }}>Jasper</h1>
       </section>
 
-      <section style={{ position: 'relative', overflow: 'hidden' }}>
+      <section style={{ position: 'relative', overflow: 'hidden', borderBottom: '1px solid #cccccc4e' }}>
         
         <div style={{ 
           position: 'absolute', 
