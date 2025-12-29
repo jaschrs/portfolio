@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="main"> 
 
-      
+      <section style={{ position: 'relative', overflow: 'hidden', height: '7vh', alignItems: 'center', display: 'flex', justifyContent: 'center' }}>
+        <h1 style={{ color: 'white', fontSize: '1.5rem', fontFamily: 'JetBrains' }}>Jasper</h1>
+      </section>
 
       <section style={{ position: 'relative', overflow: 'hidden' }}>
         

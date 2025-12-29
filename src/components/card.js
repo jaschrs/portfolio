@@ -18,35 +18,6 @@ function Card(){
 }
 
 const StyledWrapper = styled.div`
-  .container {
-    color: white;
-    position: relative;
-    font-family: sans-serif;
-  }
-
-  .container::before,
-  .container::after {
-    content: "";
-    background-color: #fab5704c;
-    position: absolute;
-  }
-
-  .container::before {
-    border-radius: 50%;
-    width: 6rem;
-    height: 6rem;
-    top: 30%;
-    right: 7%;
-  }
-
-  .container::after {
-    content: "";
-    position: absolute;
-    height: 3rem;
-    top: 8%;
-    right: 5%;
-    border: 1px solid;
-  }
 
   .container .box {
     width: 11.875em;
