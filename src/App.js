@@ -4,24 +4,33 @@ import Scroll from './components/scroll';
 
 function App() {
   return (
-    <div> 
+    <div className="main"> 
+
+      <header style={{ 
+        height: '60px', 
+        background: '#1a1a1a', 
+        color: 'white', 
+        display: 'flex', 
+        alignItems: 'center', 
+        padding: '0 2rem',
+        zIndex: 10 /* Ensures Header stays on top of everything */
+      }}>
+        <h3>My Website</h3>
+      </header>
 
       <section style={{ position: 'relative', height: 500, overflow: 'hidden' }}>
         
-        {/* 1. Move DarkVeil here. Position it absolutely to cover the parent section. */}
         <div style={{ 
           position: 'absolute', 
           top: 0, 
           left: 0, 
           width: '100%', 
           height: '100%', 
-          zIndex: 0 /* Ensures it sits behind the content */ 
+          zIndex: 0 
         }}>
           <DarkVeil />
         </div>
 
-        {/* 2. Your Scrollable Content Wrapper */}
-        {/* Added zIndex: 1 to ensure text appears above the veil */}
         <div style={{ 
           height: '100%', 
           overflowY: 'auto', 
@@ -31,7 +40,7 @@ function App() {
         }}>
           
           <div style={{ width: '100%', height: '600px', position: 'relative' }}> 
-            {/* Your content goes here. DarkVeil is removed from here. */}
+            {/* content goes here */}
           </div>
 
         </div>
