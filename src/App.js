@@ -26,14 +26,26 @@ function App() {
         <div style={{ 
           height: '100%', 
           overflowY: 'auto', 
-          padding: '6rem 2rem', 
+          padding: '6rem 0rem', 
           position: 'relative', 
         }}>
           
-          <div style={{ width: '100%', height: '600px', position: 'relative' }}> 
+          <div style={{ width: '100%', height: '100%', position: 'relative'}}> 
             {/* content goes here */}
             <Card />
+
+            <section style={{ position: 'relative', overflow: 'hidden', borderBottom: '1px solid #cccccc4e', display: 'flex', justifyContent: 'center', marginTop: '2rem', padding: '1rem' }}>
+              
             
+
+            </section>
+
+            <section style={{ position: 'relative', overflow: 'hidden', borderBottom: '1px solid #cccccc4e', display: 'flex', justifyContent: 'center', marginTop: '2rem', padding: '1rem' }}>
+              
+            
+
+            </section>
+
           </div>
 
         </div>
@@ -49,12 +61,6 @@ function App() {
           opacity={1}
           style={{ zIndex: 2 }} /* Ensure the scroll effect sits on top of everything */
         />
-      </section>
-
-      <section style={{ position: 'relative', overflow: 'hidden' }}>
-
-        
-
       </section>
 
     </div>
