@@ -5,7 +5,7 @@ function Card(){
     <StyledWrapper>
       <div className="container">
         <div className="box">
-          <span className="title">Jasper Christian</span>
+          <span className="title">Jasper</span>
           <div>
             <strong>JOE WATSON SBF</strong>
             <p>0000 000 000 0000</p>
