@@ -1,74 +1,176 @@
-import styled from 'styled-components';
+import { ReactComponent as Icon } from '../assets/code-svgrepo-com.svg';
 
-function Card(){
+function UniversityCard(){
+  const styles = {
+    card: {
+      // 1. Use a semi-transparent background color
+      // Using the original dark hex #0d0d0d at 60% opacity
+      backgroundColor: 'rgba(13, 13, 13, 0.6)',
+      // 2. Add the backdrop-filter effect
+      backdropFilter: 'blur(1px)',
+      // Optional: Add a subtle white border inset to enhance the glass edge effect
+      boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
+      
+      color: '#ffffff',
+      padding: '32px',
+      borderRadius: '16px',
+      width: '380px',
+      fontFamily: 'Vera',
+      border: '1px solid #1a1a1a',
+      position: 'relative',
+    },
+    caption: {
+      fontFamily: 'VeraReg',
+    },
+    header: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'flex-start',
+      marginBottom: '24px',
+    },
+    iconContainer: {
+      backgroundColor: '#161b22',
+      padding: '12px',
+      borderRadius: '8px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      border: '1px solid #21262d',
+    },
+    badge: {
+      backgroundColor: 'rgba(0, 128, 0, 0.1)',
+      color: '#4ade80',
+      fontSize: '10px',
+      fontWeight: 'bold',
+      padding: '4px 8px',
+      borderRadius: '4px',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '6px',
+      letterSpacing: '1px',
+    },
+    dot: {
+      width: '6px',
+      height: '6px',
+      backgroundColor: '#4ade80',
+      borderRadius: '50%',
+    },
+    title: {
+      fontSize: '32px',
+      fontWeight: 'bold',
+      margin: '0 0 4px 0',
+    },
+    subtitle: {
+      color: '#6e7681',
+      fontFamily: 'VeraReg',
+      fontSize: '18px',
+      margin: '0 0 32px 0',
+    },
+    infoSection: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '20px',
+      marginBottom: '40px',
+    },
+    infoItem: {
+      display: 'flex',
+      gap: '16px',
+    },
+    bullet: {
+      color: '#6480bbff',
+      fontSize: '20px',
+      marginTop: '-4px',
+    },
+    label: {
+      color: '#6e7681',
+      fontSize: '12px',
+      textTransform: 'uppercase',
+      letterSpacing: '1px',
+      marginBottom: '4px',
+    },
+    value: {
+      fontSize: '20px',
+      fontWeight: '500',
+    },
+    divider: {
+      border: 'none',
+      borderTop: '1px solid #21262d',
+      marginBottom: '24px',
+    },
+    footer: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+    },
+    gpa: {
+      color: '#484f58',
+      fontSize: '16px',
+    },
+    link: {
+      color: '#6480bbff',
+      textDecoration: 'none',
+      fontSize: '16px',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '4px',
+    }
+  };
+
   return (
-    <StyledWrapper>
-      <div className="container">
-        <div className="box">
-          <span className="title">Jasper</span>
+    <div style={styles.card}>
+      {/* Top Section */}
+      <div style={styles.header}>
+        <div style={styles.iconContainer}>
+          <Icon width={24} height={24} fill='#6480bbff' />
+        </div>
+        <div style={styles.badge}>
+          <div style={styles.dot}></div>
+          CURRENT
+        </div>
+      </div>
+
+      {/* University Title */}
+      <h2 style={styles.title}>Brock University</h2>
+      <p style={styles.subtitle}>Bachelor Of Science</p>
+
+      {/* Details List */}
+      <div style={styles.infoSection}>
+        <div style={styles.infoItem}>
+          <span style={styles.bullet}>•</span>
           <div>
-            <strong>JOE WATSON SBF</strong>
-            <p>0000 000 000 0000</p>
-            <span>VALID</span> <span>01/28</span>
+            <div style={styles.label}>Degree</div>
+            <div style={styles.caption}>Computer Science (Honours) Co-op</div>
+          </div>
+        </div>
+        
+        <div style={styles.infoItem}>
+          <span style={styles.bullet}>•</span>
+          <div>
+            <div style={styles.label}>Focus</div>
+            <div style={styles.caption}>Software Engineering</div>
+          </div>
+        </div>
+
+        <div style={styles.infoItem}>
+          <span style={styles.bullet}>•</span>
+          <div>
+            <div style={styles.label}>Graduation</div>
+            <div style={styles.caption}>Class of 2029</div>
           </div>
         </div>
       </div>
-    </StyledWrapper>
+
+      <hr style={styles.divider} />
+
+      {/* Footer */}
+      <div style={styles.footer}>
+        <span style={styles.gpa}>GPA 3.91</span>
+        <a href="#" style={styles.link}>
+          Transcript <span>→</span>
+        </a>
+      </div>
+    </div>
   );
-}
+};
 
-const StyledWrapper = styled.div`
-  .container .box {
-    width: 20em;
-    height: 30em;
-    padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.074);
-    border: 1px solid rgba(255, 255, 255, 0.222);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-radius: 0.7rem;
-    transition: all ease 0.3s;
-  }
-
-  .container .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .container .box .title {
-    font-size: 150%;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    font-family: 'JetBrains';
-    align-self: center;
-  }
-
-  .container .box div strong {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
-  .container .box div p {
-    margin: 0;
-    font-size: 0.9em;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-  }
-
-  .container .box div span {
-    font-size: 0.7rem;
-    font-weight: 300;
-  }
-
-  .container .box div span:nth-child(3) {
-    font-weight: 500;
-    margin-right: 0.2rem;
-  }
-
-  .container .box:hover {
-    box-shadow: 0px 0px 20px 1px #6648a13f;
-    border: 1px solid rgba(64, 33, 165, 0.45);
-  }`;
-
-export default Card;
+export default UniversityCard;

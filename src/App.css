@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    overflow-x: hidden;
 }
 
 .gradual-blur-inner {
@@ -40,4 +41,14 @@
 @font-face {
     font-family: 'JetBrains';
     src: url('./assets/JetBrainsMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Vera';
+    src: url('./assets/VeraMoBd.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VeraReg';
+    src: url('./assets/VeraMono.ttf') format('truetype');
 }
