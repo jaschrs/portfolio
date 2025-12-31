@@ -3,24 +3,20 @@ import { ReactComponent as Icon } from '../assets/code-svgrepo-com.svg';
 function UniversityCard(){
   const styles = {
     card: {
-      // 1. Use a semi-transparent background color
-      // Using the original dark hex #0d0d0d at 60% opacity
       backgroundColor: 'rgba(13, 13, 13, 0.6)',
-      // 2. Add the backdrop-filter effect
       backdropFilter: 'blur(1px)',
-      // Optional: Add a subtle white border inset to enhance the glass edge effect
-      boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
+      boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 30px 20px 70px rgba(0, 0, 0, 0.4)',
       
       color: '#ffffff',
       padding: '32px',
       borderRadius: '16px',
       width: '380px',
-      fontFamily: 'Vera',
+      fontFamily: 'JetBrainsBold',
       border: '1px solid #1a1a1a',
       position: 'relative',
     },
     caption: {
-      fontFamily: 'VeraReg',
+      fontFamily: 'JetBrainsThin',
     },
     header: {
       display: 'flex',
@@ -62,7 +58,7 @@ function UniversityCard(){
     },
     subtitle: {
       color: '#6e7681',
-      fontFamily: 'VeraReg',
+      fontFamily: 'JetBrains',
       fontSize: '18px',
       margin: '0 0 32px 0',
     },
@@ -77,7 +73,7 @@ function UniversityCard(){
       gap: '16px',
     },
     bullet: {
-      color: '#6480bbff',
+      color: '#0c4196',
       fontSize: '20px',
       marginTop: '-4px',
     },
@@ -107,7 +103,7 @@ function UniversityCard(){
       fontSize: '16px',
     },
     link: {
-      color: '#6480bbff',
+      color: '#0c4196',
       textDecoration: 'none',
       fontSize: '16px',
       display: 'flex',
@@ -121,7 +117,7 @@ function UniversityCard(){
       {/* Top Section */}
       <div style={styles.header}>
         <div style={styles.iconContainer}>
-          <Icon width={24} height={24} fill='#6480bbff' />
+          <Icon width={24} height={24} fill='#0c4196' />
         </div>
         <div style={styles.badge}>
           <div style={styles.dot}></div>

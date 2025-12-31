@@ -1,14 +1,15 @@
 import './App.css';
 import DarkVeil from './components/bg';
 import Scroll from './components/scroll';
-import Main from './components/main';
+import Main from './components/section/main';
+import NavBar from './components/section/navbar';
 
 function App() {
   return (
     <div className="main"> 
 
       <section style={{ position: 'relative', overflow: 'hidden', height: '8vh', alignItems: 'center', display: 'flex', justifyContent: 'center', borderBottom: '1px solid #cccccc4e', gap: '4vh' }}>
-        
+        <NavBar />
       </section>
 
       <section style={{ position: 'relative', overflow: 'hidden', borderBottom: '1px solid #cccccc4e' }}>

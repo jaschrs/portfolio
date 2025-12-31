@@ -38,9 +38,16 @@
   z-index: 1000;
 }
 
-@font-face {
-    font-family: 'JetBrains';
-    src: url('./assets/JetBrainsMono-Regular.ttf') format('truetype');
+.name-text {
+  font-family: 'JetBrains';
+  font-size: 2vh;
+  margin: 0;
+  transition: color 0.2s ease;
+  cursor: default;
+}
+
+.name-text:hover {
+  color: #0c4196;
 }
 
 @font-face {
@@ -51,4 +58,20 @@
 @font-face {
     font-family: 'VeraReg';
     src: url('./assets/VeraMono.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'JetBrains';
+    src: url('./assets/JetBrainsMono-Regular.ttf') format('truetype');
+}
+
+
+@font-face{
+    font-family: 'JetBrainsThin';
+    src: url('./assets/JetBrainsMono-Thin.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'JetBrainsBold';
+    src: url('./assets/JetBrainsMono-ExtraBold.ttf') format('truetype');
 }
