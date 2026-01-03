@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="main"> 
 
-      <section style={{ position: 'relative', overflow: 'hidden', height: '8vh', alignItems: 'center', display: 'flex', justifyContent: 'center', borderBottom: '1px solid #cccccc4e', gap: '4vh' }}>
+      <section style={{ position: 'relative', overflow: 'hidden', height: '3.3vw', alignItems: 'center', display: 'flex', justifyContent: 'center', borderBottom: '1px solid #cccccc4e', gap: '4vh' }}>
         <NavBar />
       </section>
 
@@ -18,12 +18,11 @@ function App() {
           <DarkVeil />
         </div>
 
-        <div style={{ height: '100%', overflowY: 'auto', padding: '6rem 0vh', position: 'relative',}}>
+        <div style={{ padding: '6rem 0vw'}}>
           
           <div style={{ width: '100%', height: '100%', position: 'relative'}}> 
             {/* content goes here */}
             <Main />
-
             <section style={{ position: 'relative', overflow: 'hidden', borderBottom: '1px solid #cccccc4e', display: 'flex', justifyContent: 'center', marginTop: '2rem', padding: '1rem' }}>
               
 
