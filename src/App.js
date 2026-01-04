@@ -1,6 +1,7 @@
 import './App.css';
 import DarkVeil from './components/bg';
 import Scroll from './components/scroll';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -51,6 +52,8 @@ function App() {
         
 
       </section>
+
+      <Analytics />
 
     </div>
 
