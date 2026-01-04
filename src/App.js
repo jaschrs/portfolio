@@ -3,6 +3,7 @@ import DarkVeil from './components/bg';
 import Scroll from './components/scroll';
 import Main from './components/section/main';
 import NavBar from './components/section/navbar';
+import About from './components/section/about';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       </section>
 
       <section style={{ position: 'relative', overflow: 'hidden', borderBottom: '1px solid #cccccc4e' }}>
+
+        
         
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', }}>
           <DarkVeil />
@@ -23,15 +26,11 @@ function App() {
           <div style={{ width: '100%', height: '100%', position: 'relative'}}> 
             {/* content goes here */}
             <Main />
-            <section style={{ position: 'relative', overflow: 'hidden', borderBottom: '1px solid #cccccc4e', display: 'flex', justifyContent: 'center', marginTop: '2rem', padding: '1rem' }}>
-              
-
-
-            </section>
-
-            <section style={{ position: 'relative', overflow: 'hidden', borderBottom: '1px solid #cccccc4e', display: 'flex', justifyContent: 'center', marginTop: '2rem', padding: '1rem' }}>
-              
             
+
+            <section style={{ position: 'relative', overflow: 'hidden', borderTop: '1px solid #cccccc4e', display: 'flex', justifyContent: 'center', marginTop: '2rem', padding: '1rem' }}>
+              
+            <About />
 
             </section>
 

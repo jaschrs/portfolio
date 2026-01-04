@@ -75,3 +75,8 @@
     font-family: 'JetBrainsBold';
     src: url('./assets/JetBrainsMono-ExtraBold.ttf') format('truetype');
 }
+
+@font-face{
+    font-family: 'Serif';
+    src: url('./assets/OpenSans-Regular.ttf') format('truetype');
+}
