@@ -1,0 +1,6 @@
+{
+  "framework": null,
+  "installCommand": "pip install -r requirements.txt",
+  "buildCommand": "zensical build --clean",
+  "outputDirectory": "site"
+}

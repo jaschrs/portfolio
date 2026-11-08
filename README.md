@@ -1,29 +1,29 @@
-# Portfolio
+# portfolio
 
-Personal portfolio for Jasper Christian, built with Next.js (App Router), TypeScript, Tailwind CSS v4, Motion and React Three Fiber. An F-16 flies across a live sky as you scroll.
+Personal site, project docs and blog, built with [Zensical](https://zensical.org).
 
-## Run
+## Develop
 
 ```bash
-npm install
-npm run dev     # http://localhost:3000
-npm run build   # production build
-npm run lint
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+.venv/bin/zensical serve
 ```
 
-## Editing content
+Open http://localhost:8000. `zensical build` writes the static site to `site/`.
 
-All text (profile, experience, projects, skills, links) lives in **`lib/data.ts`**. Replace the placeholder entries there; no component changes needed.
+## Layout
 
-- Portrait: put your photo in `public/` (e.g. `public/me.jpg`) and set `photo: "/me.jpg"` in `lib/data.ts`. Until then the hero shows a placeholder silhouette.
-- F-16: download the [Low-Poly F-16 Fighting Falcon](https://sketchfab.com/3d-models/low-poly-f-16-fighting-falcon-f175493965f545bfa975575846151216) by Caelin (CC BY 4.0) as glTF/.glb and save it as `public/models/f16.glb`. Until then a placeholder jet flies. If its nose doesn't point left in the hero, change `jet.rotation` in `lib/data.ts` (degrees, e.g. `[0, 90, 0]`). Keep the footer credit; the license requires it.
-- Résumé: drop a `resume.pdf` into `public/` (linked from the command menu and terminal).
-- Accent color: `--accent` in `app/globals.css`.
+- `zensical.toml`: site config, navigation, theme and social links.
+- `docs/index.md`, `experience.md`, `contact.md`: the portfolio pages.
+- `docs/projects.md`: the project overview cards.
+- `docs/<project>/`: one folder per project, served at `/<project>/`. To add a
+  project, create `docs/<slug>/index.md`, then add it to the nav in
+  `zensical.toml` and to the cards in `docs/projects.md`.
+- `docs/blog/posts/`: blog posts (front matter needs a `date`).
 
-## Things to try
+## Deploy
 
-- `⌘K` / `Ctrl+K`: command menu.
-- Type `help` in the About terminal.
-- Hover project cards, then click one for details.
-- Type letters while the Skills keyboard is on screen.
-- ↑ ↑ ↓ ↓ ← → ← → B A
+Vercel builds from `vercel.json`: it installs `requirements.txt`, runs
+`zensical build --clean` and serves `site/`. Set `site_url` in `zensical.toml`
+to the real domain.
