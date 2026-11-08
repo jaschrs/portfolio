@@ -14,4 +14,4 @@ Multiplayer canvas using Yjs CRDTs over WebSockets with presence, offline edits 
 ## Getting started
 
 !!! note "Stub"
-    Installation and usage docs go here. Add more pages under `docs/relay/` and list them in the nav in `zensical.toml`.
+    Installation and usage docs go here. Add more pages under `docs/projects/relay/` and list them in the nav in `zensical.toml`.

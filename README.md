@@ -16,10 +16,11 @@ Open http://localhost:8000. `zensical build` writes the static site to `site/`.
 
 - `zensical.toml`: site config, navigation, theme and social links.
 - `docs/index.md`, `experience.md`, `contact.md`: the portfolio pages.
-- `docs/projects.md`: the project overview cards.
-- `docs/<project>/`: one folder per project, served at `/<project>/`. To add a
-  project, create `docs/<slug>/index.md`, then add it to the nav in
-  `zensical.toml` and to the cards in `docs/projects.md`.
+- `docs/projects/index.md`: the project overview cards.
+- `docs/projects/<project>/`: one folder per project, served at
+  `/projects/<project>/`. To add a project, create
+  `docs/projects/<slug>/index.md`, then add it to the nav in `zensical.toml`
+  and to the cards in `docs/projects/index.md`.
 - `docs/blog/posts/`: blog posts (front matter needs a `date`).
 
 ## Deploy

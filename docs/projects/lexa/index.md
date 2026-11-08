@@ -13,4 +13,4 @@ Hand-written lexer and Pratt parser, Hindley–Milner type inference, and an LLV
 ## Getting started
 
 !!! note "Stub"
-    Installation and usage docs go here. Add more pages under `docs/lexa/` and list them in the nav in `zensical.toml`.
+    Installation and usage docs go here. Add more pages under `docs/projects/lexa/` and list them in the nav in `zensical.toml`.

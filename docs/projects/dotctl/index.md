@@ -13,4 +13,4 @@ Symlinks, templating and per-host overrides from a single TOML file. Single stat
 ## Getting started
 
 !!! note "Stub"
-    Installation and usage docs go here. Add more pages under `docs/dotctl/` and list them in the nav in `zensical.toml`.
+    Installation and usage docs go here. Add more pages under `docs/projects/dotctl/` and list them in the nav in `zensical.toml`.

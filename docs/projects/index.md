@@ -1,7 +1,5 @@
 # Projects
 
-Each project has its own page with docs at `/<project>/`.
-
 <div class="grid cards" markdown>
 
 -   :lucide-cpu: **[Kestrel](kestrel/index.md)** · Systems · 2026

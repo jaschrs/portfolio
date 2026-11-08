@@ -13,4 +13,4 @@ Indexes a local photo library with CLIP, stores vectors in an HNSW index, and an
 ## Getting started
 
 !!! note "Stub"
-    Installation and usage docs go here. Add more pages under `docs/sightline/` and list them in the nav in `zensical.toml`.
+    Installation and usage docs go here. Add more pages under `docs/projects/sightline/` and list them in the nav in `zensical.toml`.

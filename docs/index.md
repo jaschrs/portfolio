@@ -1,19 +1,9 @@
----
-hide:
-  - navigation
-  - toc
----
+# ![Jasper's GitHub avatar](assets/avatar.png){ width="150" } <span>Hello there, I'm Jasper <br>reporting for duty :wave:</span> { .hero }
 
-# Hi, I'm Jasper :wave:
+!!! warning "Availability"
+    On an active software development internship, but available for Summer 2027 co-ops. More details on my [LinkedIn](https://linkedin.com/in/your-handle).
 
-I build fast, well-crafted software, from low-level systems to the interfaces people touch.
-
-**Software engineer · systems tinkerer · full-stack builder · CS student**
-
-!!! success "Open to Summer 2027 internships"
-    B.S. Computer Science, University of Somewhere, graduating May 2028. Based on Earth, UTC−5.
-
-[:lucide-folder-git-2: Projects](projects.md){ .md-button .md-button--primary }
+[:lucide-folder-git-2: Projects](projects/index.md){ .md-button .md-button--primary }
 [:lucide-briefcase: Experience](experience.md){ .md-button }
 [:lucide-mail: Contact](contact.md){ .md-button }
 
@@ -21,47 +11,43 @@ I build fast, well-crafted software, from low-level systems to the interfaces pe
 
 I'm a computer science student who likes understanding how things work all the way down (compilers, networks, operating systems) and then using that to build software that feels effortless.
 
-Lately I've been writing systems code in Rust, shipping full-stack side projects, and spending too much time tuning my editor config.
+Lately I've been writing systems code in Rust, and spending too much time prompting Claude.
+
+When I'm not working, you'll most likely catch me on some competitive titles like CS2, Fortnite, Rocket League, while also enjoying Spider-Man on my playstation.
 
 <div class="grid cards" markdown>
 
--   **6+**
-
-    ---
-
-    years writing code
-
--   **20+**
-
-    ---
-
-    projects shipped
-
--   **3.9**
-
-    ---
-
-    GPA
+-   **6+** years ~~writing code~~ playing video games
+-   **2** co-ops completed
+-   **3.91** GPA
 
 </div>
+
+## Skills
+
+**Languages:** `TypeScript` `Python` `Rust` `Go` `C` `C++` `Java` `SQL` `Bash`
+
+**Frameworks:** `React` `Next.js` `Node.js` `FastAPI` `PyTorch` `gRPC`
+
+**Infra & tools:** `Linux` `Git` `Docker` `Kubernetes` `PostgreSQL` `Redis` `AWS` `Vercel`
 
 ## Featured
 
 <div class="grid cards" markdown>
 
--   :lucide-cpu: **[Kestrel](kestrel/index.md)**
+-   :lucide-cpu: **[Kestrel](projects/kestrel/index.md)**
 
     ---
 
     A tiny x86-64 hobby kernel written in Rust.
 
--   :lucide-pen-tool: **[Relay](relay/index.md)**
+-   :lucide-pen-tool: **[Relay](projects/relay/index.md)**
 
     ---
 
     Realtime collaborative whiteboard with CRDT sync.
 
--   :lucide-braces: **[Lexa](lexa/index.md)**
+-   :lucide-braces: **[Lexa](projects/lexa/index.md)**
 
     ---
 

@@ -8,24 +8,25 @@ copyright = "Copyright &copy; 2026 Jasper Christian"
 repo_url = "https://github.com/jaschrs"
 repo_name = "jaschrs"
 
-# Each project lives at its own root path (docs/<slug>/ -> /<slug>/).
-# To add one: create docs/<slug>/index.md, add it here and to projects.md.
+# Each project lives under /projects/ (docs/projects/<slug>/ -> /projects/<slug>/).
+# To add one: create docs/projects/<slug>/index.md, add it here and to projects/index.md.
 nav = [
   { "Home" = "index.md" },
   { "Experience" = "experience.md" },
   { "Projects" = [
-    "projects.md",
-    { "Kestrel" = "kestrel/index.md" },
-    { "Relay" = "relay/index.md" },
-    { "Lexa" = "lexa/index.md" },
-    { "Sightline" = "sightline/index.md" },
-    { "dotctl" = "dotctl/index.md" },
-    { "CoursePlan" = "courseplan/index.md" },
+    "projects/index.md",
+    { "Kestrel" = "projects/kestrel/index.md" },
+    { "Relay" = "projects/relay/index.md" },
+    { "Lexa" = "projects/lexa/index.md" },
+    { "Sightline" = "projects/sightline/index.md" },
+    { "dotctl" = "projects/dotctl/index.md" },
+    { "CoursePlan" = "projects/courseplan/index.md" },
   ] },
   { "Blog" = "blog/index.md" },
   { "Contact" = "contact.md" },
 ]
 
+extra_css = ["stylesheets/extra.css"]
 # Vercel Web Analytics; served by Vercel once Analytics is enabled for the project.
 extra_javascript = [{ path = "/_vercel/insights/script.js", defer = true }]
 
@@ -49,9 +50,6 @@ features = [
   "search.highlight",
 ]
 
-[project.theme.icon]
-logo = "lucide/terminal"
-
 [[project.theme.palette]]
 media = "(prefers-color-scheme)"
 toggle.icon = "lucide/sun-moon"
@@ -68,6 +66,9 @@ media = "(prefers-color-scheme: dark)"
 scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
+
+[project.extra]
+generator = false
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
@@ -92,6 +93,7 @@ footnotes = {}
 md_in_html = {}
 toc.permalink = true
 pymdownx.betterem = {}
+pymdownx.tilde = {}
 pymdownx.details = {}
 pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
 pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"

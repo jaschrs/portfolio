@@ -13,4 +13,4 @@ Drag-and-drop semester planner that checks prerequisites and graduation requirem
 ## Getting started
 
 !!! note "Stub"
-    Installation and usage docs go here. Add more pages under `docs/courseplan/` and list them in the nav in `zensical.toml`.
+    Installation and usage docs go here. Add more pages under `docs/projects/courseplan/` and list them in the nav in `zensical.toml`.
