@@ -2,37 +2,34 @@
 
 import { links, profile } from "@/lib/data";
 import { useUI } from "../UIProvider";
-import Magnetic from "../Magnetic";
-import Reveal from "../Reveal";
-import ScrambleText from "../ScrambleText";
 
 export default function Contact() {
   const { copyEmail } = useUI();
   const year = new Date().getFullYear();
+  const { jet } = profile;
 
   return (
     <section id="contact" className="relative px-5 pb-12 pt-24 sm:px-8 md:pt-32 lg:px-12">
-      <div className="label mb-8 flex items-center gap-3">
-        <span className="text-accent">05</span>
-        <span className="h-px w-8 bg-line-strong" />
-        <ScrambleText text="Contact" />
+      <div className="label on-sky mb-8 flex items-center gap-3">
+        <span>05</span>
+        <span className="h-px w-8 bg-white/60" />
+        Contact
       </div>
 
-      <Reveal>
-        <h2 className="display text-[clamp(3rem,8vw,7rem)]">
+      <div>
+        <h2 className="display on-sky text-[clamp(3rem,8vw,7rem)]">
           Let&apos;s build
           <br />
-          <span className="text-dim">something</span>
+          <span className="text-white/75">something</span>
           <span className="text-accent">.</span>
         </h2>
-      </Reveal>
+      </div>
 
-      <Reveal delay={0.1} className="mt-12 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-        <p className="max-w-md text-lg text-muted">
+      <div className="mt-12 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <p className="on-sky max-w-md text-lg">
           I&apos;m looking for internships and interesting problems. My inbox is always open — whether it&apos;s
           an opportunity, a project, or just to say hi.
         </p>
-        <Magnetic strength={0.25}>
           <button
             type="button"
             onClick={copyEmail}
@@ -43,18 +40,17 @@ export default function Contact() {
               ↗
             </span>
           </button>
-        </Magnetic>
-      </Reveal>
+      </div>
 
-      <ul className="mt-20 border-t border-line">
+      <ul className="mt-20 overflow-hidden rounded-2xl border border-line bg-surface">
         {links.map((l, i) => (
           <li key={l.label}>
-            <Reveal delay={i * 0.05}>
+            <div>
               <a
                 href={l.href}
                 target={l.href.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
-                className="group relative flex items-center justify-between overflow-hidden border-b border-line px-2 py-6 sm:py-8"
+                className="group relative flex items-center justify-between overflow-hidden border-b border-line px-5 py-6 sm:px-8 sm:py-8"
               >
                 {/* solid wipe fill on hover */}
                 <span className="absolute inset-0 origin-bottom scale-y-0 bg-accent transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-y-100" />
@@ -67,19 +63,26 @@ export default function Contact() {
                   <span className="text-2xl transition-transform duration-300 group-hover:rotate-45">↗</span>
                 </span>
               </a>
-            </Reveal>
+            </div>
           </li>
         ))}
       </ul>
 
-      <footer className="label mt-24 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <footer className="label on-sky mt-24 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <span>
           © {year} {profile.name}
         </span>
-        <span className="text-dim">Designed &amp; built from scratch with Next.js</span>
-        <span className="text-dim" title="try it">
-          ↑↑↓↓←→←→BA
+        <span>
+          F-16 model:{" "}
+          <a href={jet.credit.url} target="_blank" rel="noreferrer" className="underline underline-offset-4">
+            {jet.credit.title}
+          </a>{" "}
+          by {jet.credit.author} ·{" "}
+          <a href={jet.credit.licenseUrl} target="_blank" rel="noreferrer" className="underline underline-offset-4">
+            {jet.credit.license}
+          </a>
         </span>
+        <span title="try it">↑↑↓↓←→←→BA</span>
       </footer>
     </section>
   );

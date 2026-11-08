@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, MotionConfig, motion } from "motion/react";
 import CommandMenu from "./CommandMenu";
 import { profile } from "@/lib/data";
 
@@ -81,8 +81,10 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
     <UIContext.Provider
       value={{ toast, copyEmail, commandOpen, setCommandOpen, cycleAccent }}
     >
-      {children}
-      <CommandMenu />
+      <MotionConfig reducedMotion="user">
+        {children}
+        <CommandMenu />
+      </MotionConfig>
       <AnimatePresence>
         {toastMsg && (
           <motion.div

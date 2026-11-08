@@ -1,7 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
-import { motion, useInView } from "motion/react";
+import { useMemo, useState } from "react";
 
 const WEEKS = 52;
 const DAYS = 7;
@@ -20,8 +19,6 @@ function mulberry32(seed: number) {
 }
 
 export default function ContributionGrid() {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-10% 0px" });
   const [hover, setHover] = useState<{ count: number; label: string } | null>(null);
 
   const cells = useMemo(() => {
@@ -48,7 +45,7 @@ export default function ContributionGrid() {
   };
 
   return (
-    <div ref={ref} className="rounded-xl border border-line bg-surface p-5 sm:p-6">
+    <div className="rounded-xl border border-line bg-surface p-5 sm:p-6">
       <div className="mb-5 flex flex-wrap items-baseline justify-between gap-2">
         <span className="label">Commit activity</span>
         <span className="font-mono text-xs text-muted">
@@ -70,18 +67,15 @@ export default function ContributionGrid() {
           onPointerLeave={() => setHover(null)}
         >
           {cells.map((c, i) => (
-            <motion.span
+            <span
               key={i}
-              initial={{ scale: 0 }}
-              animate={inView ? { scale: 1 } : {}}
-              transition={{ delay: c.week * 0.012, type: "spring", stiffness: 400, damping: 20 }}
               onPointerEnter={() => setHover(describe(i, c.count))}
               className="relative aspect-square rounded-[2px] bg-raised transition-transform hover:scale-150 hover:outline hover:outline-1 hover:outline-fg"
             >
               {c.level > 0 && (
                 <span className="absolute inset-0 rounded-[2px] bg-accent" style={{ opacity: LEVEL_OPACITY[c.level] }} />
               )}
-            </motion.span>
+            </span>
           ))}
         </div>
       </div>

@@ -62,7 +62,7 @@ function ProjectCard({
         }`}
       >
         <div className={`relative flex-1 overflow-hidden border-b border-line ${big ? "min-h-64" : "min-h-36"}`}>
-          <ProjectArt project={project} active={hover} />
+          <ProjectArt project={project} active={false} />
           <span className="absolute left-4 top-4 rounded-full border border-line bg-surface px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-muted">
             {project.category}
           </span>
@@ -126,7 +126,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
         transition={{ type: "spring", stiffness: 300, damping: 32 }}
       >
         <div className="relative h-52 border-b border-line">
-          <ProjectArt project={project} active />
+          <ProjectArt project={project} active={false} />
           <button
             type="button"
             onClick={onClose}
@@ -213,7 +213,7 @@ export default function Projects() {
               aria-selected={active}
               onClick={() => setFilter(f)}
               className={`relative rounded-full border px-4 py-2 text-sm transition-colors ${
-                active ? "border-accent text-ink" : "border-line text-muted hover:border-line-strong hover:text-fg"
+                active ? "border-accent text-ink" : "border-line bg-surface text-muted hover:border-line-strong hover:text-fg"
               }`}
             >
               {active && (

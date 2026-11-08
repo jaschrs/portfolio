@@ -84,18 +84,18 @@ export default function Skills() {
         }
       />
 
-      <div role="tablist" aria-label="Skill categories" className="mb-6 flex flex-wrap gap-6 border-b border-line">
+      <div role="tablist" aria-label="Skill categories" className="on-sky mb-6 flex flex-wrap gap-6 border-b border-white/40">
         {TABS.map((t) => (
           <button
             key={t}
             role="tab"
             aria-selected={tab === t}
             onClick={() => setTab(t)}
-            className={`relative pb-3 text-sm transition-colors ${tab === t ? "text-fg" : "text-muted hover:text-fg"}`}
+            className={`relative pb-3 text-sm transition-colors ${tab === t ? "text-white" : "text-white/70 hover:text-white"}`}
           >
             {t}
             {tab === t && (
-              <motion.span layoutId="skill-tab" className="absolute inset-x-0 -bottom-px h-0.5 bg-accent" />
+              <motion.span layoutId="skill-tab" className="absolute inset-x-0 -bottom-px h-0.5 bg-white" />
             )}
           </button>
         ))}
@@ -104,16 +104,9 @@ export default function Skills() {
       <div ref={ref} className="rounded-2xl border border-line bg-surface p-3 sm:p-5">
         <div className="grid grid-cols-3 gap-2 sm:grid-cols-5 sm:gap-3 lg:grid-cols-8">
           {ALL.map(({ item, group }, i) => (
-            <motion.div
-              key={item}
-              className={i % 9 === 0 ? "col-span-2" : ""}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: (i % 8) * 0.03 + Math.floor(i / 8) * 0.06 }}
-            >
+            <div key={item} className={i % 9 === 0 ? "col-span-2" : ""}>
               <Keycap label={item} dimmed={tab !== "All" && tab !== group} pressed={pressed.has(item)} />
-            </motion.div>
+            </div>
           ))}
         </div>
         <div className="mt-4 flex items-center justify-between px-1 font-mono text-[10px] uppercase tracking-widest text-dim">

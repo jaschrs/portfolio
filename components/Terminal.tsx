@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useInView } from "motion/react";
 import { coursework, profile, projects, skillGroups } from "@/lib/data";
 import { useUI } from "./UIProvider";
 
@@ -21,51 +20,20 @@ export default function Terminal() {
   const ref = useRef<HTMLDivElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-20% 0px" });
-  const [lines, setLines] = useState<Line[]>([]);
-  const [typing, setTyping] = useState("");
-  const [ready, setReady] = useState(false);
+  const [lines, setLines] = useState<Line[]>(() => [
+    ...INTRO.flatMap((step) => [
+      { kind: "cmd" as const, text: step.cmd },
+      ...step.out.map((text) => ({ kind: "out" as const, text })),
+    ]),
+    { kind: "out", text: "type `help` to explore." },
+  ]);
   const [input, setInput] = useState("");
   const [history, setHistory] = useState<string[]>([]);
   const [hIndex, setHIndex] = useState(-1);
 
   useEffect(() => {
-    if (!inView) return;
-    let cancelled = false;
-    const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    (async () => {
-      for (const step of INTRO) {
-        if (!reduced) {
-          for (let i = 1; i <= step.cmd.length; i++) {
-            if (cancelled) return;
-            setTyping(step.cmd.slice(0, i));
-            await sleep(38 + Math.random() * 50);
-          }
-          await sleep(220);
-        }
-        if (cancelled) return;
-        setTyping("");
-        setLines((l) => [
-          ...l,
-          { kind: "cmd", text: step.cmd },
-          ...step.out.map((text) => ({ kind: "out" as const, text })),
-        ]);
-        if (!reduced) await sleep(350);
-      }
-      if (!cancelled) {
-        setLines((l) => [...l, { kind: "out", text: "type `help` to explore." }]);
-        setReady(true);
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [inView]);
-
-  useEffect(() => {
     bodyRef.current?.scrollTo({ top: bodyRef.current.scrollHeight });
-  }, [lines, typing]);
+  }, [lines]);
 
   const exec = (raw: string) => {
     const cmd = raw.trim();
@@ -181,8 +149,7 @@ export default function Terminal() {
         )}
         <div className="flex items-center">
           {prompt}
-          {ready ? (
-            <input
+          <input
               ref={inputRef}
               value={input}
               onChange={(e) => setInput(e.target.value)}
@@ -193,12 +160,6 @@ export default function Terminal() {
               autoComplete="off"
               className="min-w-0 flex-1 bg-transparent text-fg caret-[var(--accent)] outline-none"
             />
-          ) : (
-            <span className="text-fg">
-              {typing}
-              <span className="caret ml-px inline-block h-[1.1em] w-[0.55em] translate-y-[0.2em] bg-accent" />
-            </span>
-          )}
         </div>
       </div>
     </div>

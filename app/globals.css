@@ -24,13 +24,14 @@
 }
 
 html {
-  background: var(--color-bg);
+  /* Sky-blue fallback shown until the WebGL sky mounts. */
+  background: #3f7fc4;
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--color-bg);
+  background: #3f7fc4;
   color: var(--color-fg);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -61,6 +62,21 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
+}
+
+/* Text that sits directly on the sky rather than on a card. */
+.on-sky {
+  color: #fff;
+  text-shadow:
+    0 1px 2px rgb(8 28 60 / 0.55),
+    0 0 18px rgb(8 28 60 / 0.35);
+}
+/* Big headings sit inside overflow-clipped reveal spans; keep their shadow tight. */
+.display.on-sky {
+  text-shadow: 0 2px 8px rgb(8 28 60 / 0.3);
+}
+.label.on-sky {
+  color: #fff;
 }
 
 .display {

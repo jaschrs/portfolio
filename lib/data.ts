@@ -23,6 +23,21 @@ export const profile = {
   // Portrait shown in the hero. Drop an image into /public (e.g. /public/me.jpg)
   // and set this to "/me.jpg". Leave empty to show the placeholder silhouette.
   photo: "",
+  // 3D jet in the background. Download the .glb from the credit URL below and
+  // save it as /public/models/f16.glb. Until then a placeholder jet is shown.
+  // If the model's nose doesn't point left in the hero, adjust `rotation`
+  // (degrees, [x, y, z]) — e.g. [0, 90, 0] or [0, -90, 0].
+  jet: {
+    model: "/models/f16.glb",
+    rotation: [0, 0, 0] as [number, number, number],
+    credit: {
+      title: "Low-Poly F-16 Fighting Falcon",
+      author: "Caelin",
+      url: "https://sketchfab.com/3d-models/low-poly-f-16-fighting-falcon-f175493965f545bfa975575846151216",
+      license: "CC BY 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+    },
+  },
   bio: [
     "I'm a computer science student who likes understanding how things work all the way down — compilers, networks, operating systems — and then using that to build software that feels effortless.",
     "Lately I've been writing systems code in Rust, shipping full-stack side projects, and spending too much time tuning my editor config.",
