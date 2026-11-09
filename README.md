@@ -1,4 +1,4 @@
-# portfolio
+# website
 
 Personal site, project docs and blog, built with [Zensical](https://zensical.org).
 
